@@ -1,4 +1,4 @@
-import { ActionPanel, Action, List, getPreferenceValues } from "@raycast/api";
+import { ActionPanel, Action, List, getPreferenceValues, openExtensionPreferences } from "@raycast/api";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -91,6 +91,7 @@ export default function Command() {
                     actions={
                         <ActionPanel>
                             <Action title="Set" onAction={() => setStatus(item.status)} />
+                            <Action title="Open Extension Preferences" onAction={openExtensionPreferences} />
                         </ActionPanel>
                     }
                 />
